@@ -1,0 +1,250 @@
+Table of Contents
+Logistics	1
+Page Creation	10
+
+Logistics
+•	Logistics Supply update from Mohammad
+•	Compare mail and attachment. If any discreptencies, mail back him 
+•	Put mail table and yellow shaded rows in attachment to an excel sheet to compare
+•	Wearable ->no required
+•	Go to tablets URL and search the product->what gb->what color->pincode as 1234 and it shows wait time
+•	Put that wait time in excel sheet and continue this process for all products 
+•	If it is Backorderable  in inventory,a message will appear near wait time in live site
+•	Visit bcc.prod.estore.aws.vodafone.com.au/atg/bcc
+•	Login
+•	Merchantising->Manage Commerce Assets
+•	Create project->Project Name: PP|Logistics-08-08-19->Project Description: PP|Logistics-08-08-19->Continue
+•	Note:-Any changes will be shown in PP|Logistics-08-08-19 left corner of the page(near Merchantising tab)
+•	If status is “EOL”,It is going to be removed from the site
+•	Now versioned->Inventory->Search product in search bar
+•	Double click the product 
+•	Set Availability status and Upgrade Availability Status based on this table
+ Option to be set	Condition
+BackOrderable	when it is in weeks
+Instock	when it is in business days
+Out of Stock
+	EOL
+•	Set end date as  today
+•	Click save
+•	GO to Home
+•	Projects|created
+•	To do list-> PP|Logistics-08-08
+•	Author
+•	Type 1-2 (weeks)
+•	For 				in search filter ->1-2 weeks->Select the product by double clicking it ->remove it by clicking near the display Name->save-> Now the product is removed from 1-2 weeks(note down the device Sku)
+•	Search using device Sku and double click on the item -> set status as applicable in table.
+•	Home->go to project->Ready for action->ok->Approve Content->ok->Approve and deploy to staging->wait->refresh->staging URL check->Accept staging Deployment->ok->Approve and deploy to production->ok->Quality Analysis QA->Live 
+•	Reply All->To mohammad->Iteration mangers in CC->”wait time has been updated as per deferred availability sheet”
+•	Reply All->Hi guys->DL-AU-Digital production(all)(Note DL-AU-Digital Operation IND(TechM onsite and Offshore+DC(Delivery Manager of Vodafone))
+•	To raise BAU request link(refer URl)->+->Create BAU request->Name,Vodafone mail,0000000000,weekly supply update 08-08-19->estore->Go live 08-08-19->submit->ref no came->…->status as Complete->assigne as Gayathri
+
+                                     Logistics Procedure
+                             			For Backorderable, In Stock
+Step 1:
+Mail from the Mohammed will be received.
+Compare the mail and the excel sheet.
+Check whether the mail and the excel sheet has same number of devices.
+If any discrepancy is seen in mail and excel follow only the excel Sheet.
+For prepaid devices we don’t do the logistics if it exits remove it.
+Compare the live site weeks and days and the current given changes and make a note in excel as comparison.
+Step 2:
+Three conditions in Logistics:
+1.	If weight time >3-4  Business Days-----------Backorderable-------With the orange color blink.
+2.	1-2 Business Days then ---In Stock.
+3.	EOL is only for the -Out of Stock.
+Step 3: 
+                            Go to the ATG tool 
+                                         |
+                              Non Versioning
+                                          |
+                                  Inventory 
+                                          |
+                 Copy and Search for the name of the devices ipad, mobile phones
+                                          |
+                   Set one of the three conditions above
+Step 4:
+•	Proceeding to this Go to Project in ATG tool.
+•	Create a new project in Logistics 
+•	Under Device Delivery Time
+•	Make the necessary changes as per conditions. Only for 1-2 Weeks remove/Add the product in all.
+•	1-2 business days don’t add in any thing
+•	SDevarajan      SDevarajan123  , sujathad        sujatha123     
+
+•	sujatha.devarajan@vodaofne.com.au 
+Ganesh@1
+                                             EOL (Out of Stock)
+Step 1: 
+Compare the mail and the excel sheet.
+Check whether the mail and the excel sheet has same number of devices.
+Step 2:
+                                      Go to the ATG tool 
+                                                     |
+                                         Non Versioning
+                                                     |
+                                                     |
+Copy and Search for the name of the devices if the device does not appear, do advance search using keyword or device sku, otherwise create a new inventory using device sku.
+                          (device sku should be taken from the project)
+                                                     |
+                                      Set as Out of Stock
+Step 3:
+•	In ATG, Go to the project and search under Device SKU for the name of device.
+•	In front of device name and Management Name give the (----) to indicate Device has been EOL.
+•	Proceeding this in End date mentioned the end date.
+•	In device (parent products) check the number of SKU’s. If all the device SKU has been ended, then end the device using the same procedure or else leave the Device(product) as such.
+•	Further, go to Bundle SKU under filter Included device, select the related plans associated to the device and remove it.
+•	Bundle Sku---Filter---Included Device---is ---Choose item---type the name of device---related plans will be displayed.
+•	By multi edit select all the plans of associated devices and select in Name and Management Name Prepend and update end date. 
+Step 4:
+•	Touch points has to be checked to the related links of this particular EOL which we have done in all the related pages.
+•	Check whether in below links are not redirecting to EOL product.
+•	Check with the merchantizing page in wiki and also in Google excel sheet.
+•	If the entire page has been EOL it has to made changes in VCA as well------Separate procedure.
+•	After checking in all the touchpoints of EOL devices. Push the project in ATG. Publish in Vca if Changes exists.
+•	Run API in VCA home page. 
+•	Download the Json link and clear the Cache /mobile phones, Business/Mobile phones and check in live.
+UNEOL:
+For coming back, the EOL device to live make the changes as remove the --- and end date in device SKU and check with related device.
+Select all related bundles and use the export file to remove all the --- and end date.
+Important note: Check for the current plans whether it has been associated to bundle.
+And then Run API in the VCA in right hand side
+Download the JSON link.
+And copy that link and cache it.
+Added device has to be run in cludo.
+
+
+
+
+
+
+                                     Logistics Procedure
+                             For Backorderable, In Stock
+Step 1:
+Mail from the Mohammed will be received.
+Compare the mail and the excel sheet.
+Check whether the mail and the excel sheet has same number of devices.
+If any discrepancy is seen in mail and excel follow only the excel Sheet.
+For prepaid devices we don’t do the logistics if it exits remove it.
+Compare the live site weeks and days and the current given changes and make a note in excel as comparison.
+Step 2:
+Three conditons in Logistics:
+4.	If weight time >3-4  Business Days-----------Backorderable-------With the orange color blink.
+5.	1-2 Business Days then ---In Stock.
+6.	EOL is only for the -Out of Stock.
+Step 3: 
+                            Go to the ATG tool 
+                                         |
+                              Non Versioning
+                                          |
+                                  Inventory 
+                                          |
+                 Copy and Search for the name of the devices ipad, mobile phones
+                                          |
+                   Set one of the three conditions above
+Step 4:
+•	Proceeding to this Go to Project in ATG tool.
+•	Create a new project in Logistics 
+•	Under Device Delivery Time
+•	Make the necessary changes as per conditions. Only for 1-2 Weeks remove/Add the product in all.
+•	1-2 busimness days don’t add in any thing
+•	SDevarajan      SDevarajan123  , sujathad        sujatha123     
+
+•	sujatha.devarajan@vodaofne.com.au 
+Ganesh@1
+                                             EOL (Out Of Stock)
+Step 1: 
+Compare the mail and the excel sheet.
+Check whether the mail and the excel sheet has same number of devices.
+Step 2:
+                                      Go to the ATG tool 
+                                                     |
+                                         Non Versioning
+                                                     |
+                                                     |
+Copy and Search for the name of the devices if the device does not appear, do advance search using keyword or device sku, otherwise create a new inventory using device sku.
+                          (device sku should be taken from the project)
+                                                     |
+                                      Set as Out of Stock
+Step 3:
+•	In ATG, Go to the project and search under Device SKU for the name of device.
+•	In front of device name and Management Name give the (----) to indicate Device has been EOL.
+•	Proceeding this in End date mentioned the end date.
+•	In device (parent products)check the number of SKU’s. If all the device SKU has been ended then end the device using the same procedure or else leave the Device(product) as such.
+•	Further, Go to Bundle SKU under filter Included device, select the related plans associated to the device and remove it.
+•	Bundle Sku---Filter---Included Device---is ---Choose item---type the name of device---related plans will be displayed.
+•	By multi edit select all the plans of associated devices and select in Name and Management Name Prepend and update end date. 
+Step 4:
+•	Touch points has to be checked to the related links of this particular EOL which we have done in all the related pages.
+•	Check whether in below links are not redirecting to EOL product.
+•	Check with the merchantizing page in wiki and also in Google excel sheet.
+•	If the entire page has been EOL it has to made changes in VCA as well------Separate procedure.
+•	After checking in all the touchpoints of EOL devices. Push the project in ATG. Publish in Vca if Changes exists.
+•	Run API in VCA home page. 
+•	Download the Json link and clear the Cache /mobile phones, Business/Mobile phones and check in live.
+UNEOL:
+For coming back the EOL device to live make the changes as remove the --- and end date in device SKU and check with related device.
+Select all related bundles and use the export file to remove all the --- and end date.
+Important note: Check for the current plans whether it has been associated to bundle.
+And then Run API in the VCA in right hand side
+Download the JSON link.
+And copy that link and cache it.
+Added device has to be run in cludo.
+
+
+ 
+ 
+ 
+Page Creation
+
+•	Thumbnail ->Cludo  search
+•	OG image->for FB-> give page URL (by using debug link)
+•	Twitter image->twitter validator->give page URL->scrape
+Cludo Banner Update
+•	my.cludo.com/1761/tools/banners
+•	Login
+•	Tools
+•	Banners
+•	Search-plans Eg: iphone
+•	Image Under Content: source code
+•	To change URL->update content->url->add
+•	To do page as EOL->Excluded page->url
+Banner Module
+•	For Desktop /mobile ,separate pictures wil be available(scalability ->yes)
+•	url->/should not be added
+•	Name->---------------
+•	Template->SPLHTMLSlimBanner
+•	Text Color->white(means Content on Banner is white)
+•	Backgroud image->drag from bookmark
+•	(both desktop & mobile)
+•	Headline-h1
+•	Body copy->h2
+•	Note->h3
+•	Padding-text position in banner
+•	Meta Index and Meta Follow->NO ->then “Show in Sitemap/SmartCrumb”->NO
+•	Lyndon->Copy deck head
+•	Meta Index and Meta Follow->YES->then “Show in Sitemap/SmartCrumb”->YES and place from Unplaced page to VCS (appropriate folder)
+•	Vodafone.com.au/sitemap.xml
+Image
+•	Folder-Banner Image
+•	url should be there
+•	scalability->yes
+•	file(desktop & mobile)
+Page EOL
+•	Go to a page
+•	Name->EOL-___
+•	Meta Index,follow->No
+•	Show in Sitemap/SmartCrumb->No
+•	Edit->URL->delete
+•	Take out of VCA->Cludo->Excluded page->url->ok
+•	Redirection ->search as redirect->Go to EOL page->url->change status as 301->Redirect to :/_____________
+ Accordin[many accordins->use Accordin Module Simplicity]
+•	Create->new->freetextModule
+•	Name:Module-IoT-test
+•	Template-.SPLfreeTextModule
+•	Content Source:<h1>---(heading)</h1>
+•	<p>_____(paragraph)
+•	Simplicity Row Style->Bottom Padding->Ok
+•	Page->Row->Acc Module->Acc Item
+•	Create ->Accordin Module Simplicity
+•	Name
+•	Template
+•	Create->Accordin Item->name folder(drag accordin from VCA lest panel),source code(<p>srong),title->Term& Conditions
